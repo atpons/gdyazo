@@ -1,0 +1,10 @@
+version: '2'
+services:
+  gdyazo-app:
+    image: gdyazo
+    volumes:
+      - ~/.config/gdyazo/:/opt/config
+      - .:/opt/gdyazo/
+    ports:
+      - 10022:8000
+    restart: always

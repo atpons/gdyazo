@@ -1,0 +1,11 @@
+version: '2'
+services:
+  gdyazo-init:
+    build: .
+    image: gdyazo
+    volumes:
+      - ~/.config/gdyazo/:/opt/config/
+      - .:/opt/gdyazo/
+    tty: true
+    stdin_open: true
+    command: ["ruby", "auth.rb"]
